@@ -101,7 +101,8 @@ def index():
     return "<h1>챗사무장 서버 정상 작동 중!</h1>"
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5001)
-
+    import os
+    port = int(os.environ.get("PORT", 5000))  # Render에서 자동으로 포트를 설정함
+    app.run(host="0.0.0.0", port=port)
 
 
