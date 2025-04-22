@@ -1,0 +1,412 @@
+@charset "utf-8";
+
+/*------------------------------------------------------------------
+
+[WebSquare Customizing StyleSheet]
+
+    Project:        차세대전자소송 내부 포털
+    Version:        1.0
+    Last change:    2022.4.22.
+
+[Table of contents]
+
+    1. Common
+    2. anchor
+    3. Group
+    4. Form
+    5. Button
+    6. Table
+    7. GridView
+    8. Tab
+    9. Tool Tip
+    10. Etc
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[1. Common ]
+-----------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------
+[2. anchor ]
+-----------------------------------------------------------------*/
+.w2trigger_anchor span {display:none; height:0; margin:0; padding:0; background: none; color:#333; line-height: 1;}
+
+
+/*------------------------------------------------------------------
+[3. Group ]
+-----------------------------------------------------------------*/
+
+/* group */
+.w2group {background-color:transparent}
+.w2group .all_shbox {position: relative; display: inline-block; margin-right: 58px;}
+.w2group .all_shbox .w2input {width: 215px; height: 31px; border: 0; padding: 0 39px 0 14px; border-radius: 100px; font-family: 'Roboto', 'Noto Sans KR', sans-serif;}
+.w2group .all_shbox .w2input::placeholder {color: #767676;}
+.w2group .all_shbox .w2anchor2 {position: absolute; width: 39px; top: 0; right: 0; bottom: 0; background: url(/pgj/cm/images/contents/ico_gnb_search.png) center no-repeat; font-size: 0;}
+
+/* group - 라디오 체크버튼 박스 레이아웃 - 일괄 송달문서 */
+.w2group.tmp_table_wrap1 {padding: 10px 20px; border-radius: 8px; background: #f5f5f5; color: #767676;}
+.w2group.tmp_table_wrap1 .w2input {margin:0;}
+
+/*------------------------------------------------------------------
+[4. Form ]
+-----------------------------------------------------------------*/
+
+/* form 공통  */
+.w2trigger{display:-moz-inline-stack;overflow:visible}/* firefox padding 버그 및 ie padding 버그 */
+
+/* input,select, texTarea  공통 */
+.w2input_disabled,
+.w2input_readonly,
+.w2textarea_disabled{border: 1px solid #d3dbe3;background:#f7f7f7 !important;color:#b4bbc2;}
+.w2selectbox_select.w2selectbox_disabled{background:#f7f7f7 url(/pgj/cm/images/contents/btn_dropdown.png);background-position: calc(100% - 12px) center;background-repeat: no-repeat;}
+.w2input,.w2textarea,.w2selectbox{margin:4px 0; padding:0 10px;background:#fff;border-radius: 3px; border: 1px solid #cdcdcd;font-size:14px; color: #5a5a5a; box-sizing:border-box}
+.w2input,.w2selectbox {height:30px;}
+.w2textarea{display:block; min-height:30px; margin:0; padding: 10px; color: #333;}
+.w2checkcombobox,.w2autoComplete,.w2upload .w2upload_input,.w2multiselect_table .w2multiselect_td{border:1px solid #cdcdcd;}
+
+/*.w2input_readonly{border: none;background:none !important;color:#767676;pointer-events: none;}*/
+
+/* radio, checkBox  공통 */
+.w2checkbox .w2checkbox_item,
+.w2radio .w2radio_item {display:inline-block;margin-right:3px;}
+.w2radio .w2radio_item {margin-right: 19px;}
+.w2checkbox .w2checkbox_item + .w2checkbox_item,
+.w2radio .w2radio_item + .w2radio_item {margin-left: 13px;}
+.w2checkbox .w2checkbox_item input[type="checkbox"]{width: 16px; height: 16px; margin:2px 3px 0 0; margin-right: 10px;}
+.w2checkbox .w2checkbox_item input[type="checkbox"],.w2checkbox .w2checkbox_item label,
+.w2radio .w2radio_item input[type="radio"],.w2checkbox_input {vertical-align:middle}
+.w2radio .w2radio_item input[type="radio"] {width: 16px; height: 16px; margin:0 5px 0 0}
+.w2radio_label, .w2checkbox_label {display: inline-block; font-size: 13px; color: #333;}
+.w2radio_disabled, .w2checkbox_disabled  {color: #767676;}
+.w2radio_td_input {padding-right: 3px;}
+
+/* form label */
+.w2selectbox_col_label, .w2input_table_sb_col, .w2table_sb_col {font-size:13px; color: #5a5a5a;}
+
+/* input - 기본 */
+
+/* input - 캘린더  */
+.w2calendar .w2selectbox_col_label,
+.w2calendar .w2table_sb_col {height: auto; line-height: normal; padding: 0; font-size: 12px;}
+.w2calendar.w2calendar_class1 {border: 1px solid #dbdbdb;border-radius:5px;box-shadow:4px 4px 6px rgba(0, 0, 0, 0.15);}
+.w2calendar_class1 { width: 230px;height: auto;}
+.w2calendar_class1 .w2calendar_wrap{border:none;padding: 10px 0 6px 0;}
+.w2calendar_class1 .w2calendar_header { height: 40px;}
+.w2calendar_class1 .w2calendar_header_last_year,.w2calendar_class1 .w2calendar_header_last_month,
+.w2calendar_class1 .w2calendar_header_next_year,.w2calendar_class1 .w2calendar_header_next_month,
+.w2calendar_class1 .w2calendar_selectbox_year_native,.w2calendar_class1 .w2calendar_selectbox_month_native{height: 26px;}
+.w2calendar_class1 .w2calendar_selectbox_year_native,
+.w2calendar_class1 .w2calendar_selectbox_month_native{border: 1px solid #cdcdcd;color: #5a5a5a;border-radius:3px;padding-left: 2px;}
+.w2calendar_class1 .w2calendar_content { border-top:0;border-bottom: 1px solid #dbdbdb; background: #fff;padding: 0 7px 3px;}
+.w2calendar_class1 .w2calendar_selectbox_year_native,.w2calendar_class1 .w2calendar_selectbox_month_native,
+.w2calendar_class1 .w2calendar_col_date button{font-family:'Roboto','Malgun Gothic', '맑은고딕', sans-serif!important;}
+.w2calendar_class1 .w2calendar_header_last_year{left: 12px;}
+.w2calendar_class1 .w2calendar_header_last_month{left: 30px;}
+.w2calendar_class1 .w2calendar_selectbox_year_native{left: 53px;width: 68px;}
+.w2calendar_class1 .w2calendar_selectbox_month_native{left: 128px;width: 52px;}
+.w2calendar_class1 .w2calendar_header_next_month{left: 186px;}
+.w2calendar_class1 .w2calendar_header_next_year{left: 202px;}
+.w2calendar_class1 .w2calendar_col_date  button {width: 23px; height: 23px; padding: 0; border-radius: 50%; font-size: 12px;}
+.w2calendar_class1 .w2calendar_col_date  {background: none;}
+.w2calendar_class1 .w2calendar_date_over button,
+.w2calendar_class1 .w2calendar_selected button {width: 23px; height: 23px; padding: 0; border-radius: 50%; font-size: 12px; color: #fff;background: none; background-color: #466ddc;}
+.w2calendar_class1 .w2calendar_holiday, .w2calendar_class1 .w2calendar_holiday button,
+.w2calendar_class1 .w2calendar_day_0, .w2calendar_class1 .w2calendar_day_0 button{color:#c24557;font-weight: normal;}
+.w2calendar_class1 .w2calendar_day_6, .w2calendar_class1 .w2calendar_day_6 button{color:#767676;font-weight: normal;}
+.w2calendar_class1 .w2calendar_date_over button,.w2calendar_class1 .w2calendar_selected button,.w2calendar_class1 .w2calendar_day_0.w2calendar_selected button,
+.w2calendar_class1 .w2calendar_day_6.w2calendar_selected button{color:#fff;}
+.w2calendar_class1 .w2calendar_footer {margin-top: 4px;margin-left: 10px;}
+
+ /* input - 캘린더  이미지 변경 */
+.w2inputCalendar_div .w2inputCalendar_button{width:22px !important;height:19px !important;background: url(/pgj/cm/images/contents/ico_calendar.png) center no-repeat !important; }
+
+/* select - 기본 */
+.w2selectbox .w2selectbox_label{padding:0}
+.w2selectbox_body_focus .w2selectbox_focus, .w2selectbox_body_over .w2selectbox_focus ,.w2selectbox_over .w2selectbox_col_label,
+.w2selectbox_focus .w2selectbox_col_label {background:#fff;}
+
+/* select - native */
+.w2selectbox_native {position:relative;width:100%;border:0;height:30px;-webkit-box-sizing:border-box;box-sizing:border-box;border-radius:3px;vertical-align:middle;margin: 4px 8px 4px 0;_margin: 4px 4px 4px 0;}
+.w2selectbox_native:after {content:'' !important;position:absolute;top:50%;right:9px;margin-top:-2px;width:0;height:0;border-left: 5px solid transparent;border-right: 5px solid transparent;border-top: 5px solid #333;}
+.w2selectbox_native select {padding:0 20px 0 10px;color:#5a5a5a;font-size:13px;border:1px solid #cdcdcd;border-radius:3px;-webkit-appearance: none;}
+.w2selectbox_native select::-ms-expand {display:none}
+.w2selectbox_native.fixedWidth .w2selectbox_native_innerDiv {height: 100%;}
+.w2selectbox_native.fixedWidth .w2selectbox_native_select {height:100%;margin-top:0 !important;background:#fff; text-overflow: ellipsis;}
+
+/* select - btn_dropdown */
+.w2selectbox .w2selectbox_col_button { background-image: url(/pgj/cm/images/contents/btn_dropdown.png); width: 18px;background-position: left center;}
+.w2selectbox_over .w2selectbox_col_button, .w2selectbox_focus .w2selectbox_col_button {background:#fff url(/pgj/cm/images/contents/btn_dropdown.png) no-repeat left center;}
+
+/* select - autoComplete (검색select)  */
+.w2autoComplete,
+.w2checkcombobox{border: 1px solid #cdcdcd;border-radius: 3px; height:28px !important;margin: 4px 8px 4px 0;}
+.w2autoComplete_col_label {height:28px; padding: 0 0 0 10px;font-size: 13px;}
+.w2autoComplete .w2autoComplete_col_button,
+.w2checkcombobox .w2checkcombobox_col_button {background-image: url(/pgj/cm/images/contents/btn_dropdown.png);padding-right: 10px;background-color: transparent;}
+.w2autoComplete_label, .w2autoComplete_input {color: #333;font-size: 13px;text-align: left; border:none !important;font-weight: normal;}
+.w2autoComplete_over .w2autoComplete_col_label, .w2autoComplete_selected .w2autoComplete_col_label {background:#fff;}
+.w2autoComplete_selected .w2autoComplete_col_label{background-color:#f7f7f7;}
+.w2autoComplete_selected .w2autoComplete_col_button {background:url(/pgj/cm/images/contents/btn_dropdown.png) center center no-repeat #f7f7f7}
+.w2autoComplete:focus {border:1px solid #333;}
+.w2autoComplete_disabled:focus {border:1px solid #cdcdcd;background:#f7f7f7; color:#767676}
+.w2autoComplete[readonly],.sel.autocmp.w2autoComplete_disabled{border:1px solid #cdcdcd;background:#f7f7f7 !important;color:#767676;cursor:default}
+.w2autoComplete_disabled .w2autoComplete_col_button {background:url(/pgj/cm/images/contents/btn_dropdown.png) center center no-repeat #f7f7f7}
+
+.autocmp .w2input_table_sb_col{border-top:0;padding: 0 0 0 8px;}
+.autocmp .w2input_table_sb_col_over{background-color:#f7f7f7;color:#466ddc;}
+
+.grid .gridBodyDefault_autoComplete{    background-image:none;background-position-x: 96%;}
+
+/* Check Combo */
+.w2table_ccb{border: 1px solid #cdcdcd;}
+.w2table_ccb .w2table_ccb_col {padding: 4px 6px;  white-space: nowrap;}
+.w2table_ccb .w2table_ccb_col_label{font-size: 13px;color: #5a5a5a;}
+.w2checkcombobox .w2checkcombobox_col_label{color: #333;font-size: 13px;}
+
+.w2grid .w2autoComplete,
+.w2grid .w2checkcombobox{border: 1px solid #cdcdcd;border-radius: 3px; height:28px !important;margin:0;width: inherit!important;}
+
+
+/* select - renderType="select" */
+.w2selectbox_select{width:160px;padding: 0 30px 0 10px;-webkit-appearance: none;-moz-appearance: none;appearance: none;border: 1px solid #cdcdcd;border-radius: 4px;color: #5a5a5a;height: 30px;font-size: 13px;margin: 4px 8px 4px 0;vertical-align: middle;background-image:url(/pgj/cm/images/contents/btn_dropdown.png);background-color:#fff;background-position: calc(100% - 12px) center;background-repeat: no-repeat;}
+select.w2selectbox_select::-ms-expand { display:none;  /* IE10, IE11*//*숨겨진 화살표의 영역유지 X */}
+
+/*------------------------------------------------------------------
+[5. Button ]
+-----------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[6. Table ]
+-----------------------------------------------------------------*/
+
+/* 웹스퀘어 라인 - 웹스퀘어 기본 라인 칼라 흰색 적용 후 투명도 적용 */
+.w2tb .w2tb_th, .w2tb .w2tb_td{border: 1px solid #fff;}
+
+/* table */
+.w2grid_dataLayer table{_width:auto!important; width:100% !important;} /*2022-01-27*/
+.tb.w2tb_adaptive_layout{border-top:none;border-left:1px solid #e3e3e3;border-right:1px solid #e3e3e3;-moz-box-sizing:border-box;box-sizing:border-box}
+.tb.w2tb_adaptive_layout .w2tb_td{min-height:17px;height:auto;border-top:1px solid #e3e3e3 !important}
+.tb.w2tb_adaptive_layout .w2tb_td:before{white-space:normal;border-right:1px solid #e3e3e3;background:#f6f6f6}
+.tb.w2tb_adaptive_layout .w2tb_th.ast + .w2tb_td:before{color:#3eaae8;background-image:url(/pgj/cm/images/contents/bg_point_ico.png);background-position:0 0;background-repeat:no-repeat}
+.tb.w2tb.w2tb_adaptive_layout .w2tb_tr:last-child .w2tb_td:last-child{border-bottom:1px solid #e3e3e3}
+
+/*------------------------------------------------------------------
+[7. GridView ]
+-----------------------------------------------------------------*/
+
+.w2grid table.gridHeaderTableDefault {border:0;}
+.w2grid thead th.gridHeaderTDDefault {height:33px; padding:1px 3px; border: 0; background: #66758c; color: #fff; font-size: 13px; font-weight: 400;}
+.w2grid thead tr th:last-child {padding-right:5px;}
+.w2grid tbody tr {background: transparent !important;  border-top: 1px solid #e1e3e5 !important;border-bottom: 1px solid #e1e3e5 !important;}
+/*
+.w2grid td.gridBodyDefault  {height:auto !important; min-height:35px;padding:3px; _background: transparent !important; border-left: 0; border-right:0; border-top: 1px solid #e1e3e5 !important; border-bottom: 1px solid #e1e3e5 !important;  color:#5a5a5a; font-size: 13px;}
+*/
+.w2grid td.gridBodyDefault  {height:auto !important; min-height:35px;padding:3px; border-left: 0; border-right:0;border-color: #e1e3e5;border-bottom-width: 1px;border-top-width: 1px; color:#5a5a5a; font-size: 13px;}
+
+.w2grid tbody tr:nth-of-type(even) {background: rgba(234,243,253,.4) !important; }
+.w2grid tbody tr:hover {background: rgba(234,243,253,1) !important;    border-top: 1px solid #e1e3e5 !important; }
+.w2grid th.gridHeaderTDDefault, .w2grid td.gridBodyDefault {text-align:center;}
+.w2grid .w2input,.w2grid .w2textarea,.w2grid .w2inputCalendar_divInput{box-sizing: border-box; }
+.w2grid .w2grid_embedded_input {height:30px !important; margin:0; padding: 2px 5px; border-radius:0; font-size:13px; text-align:center;}
+.w2grid td.gridBodyDefault button {width: auto !important; height:calc(100% - 10px) !important; padding: 2px 10px; border-radius: 3px; background: #fff; border:1px solid #dbdbdb; color:#5a5a5a; cursor: pointer;}
+.w2grid nobr, .w2grid span {padding: 0 10px; } /*display:inline-block;*/
+.w2grid td.gridBodyDefault nobr, .w2grid td.gridBodyDefault span {min-height:30px; line-height:2.1;}
+.w2grid a {color: #466ddc;}
+.w2grid .focusedTr{border:1px solid #edeeef;background:#e9f2fa !important;color:#b61c21;font-weight:bold}
+.w2grid .w2checkbox_label{vertical-align:top;}
+.w2grid .gridSubtotalDefault, .w2grid .gridFooterTDDefault {height:33px !important; }
+.w2grid .gridSubtotalDefault nobr, .w2grid .gridSubtotalDefault span, .gridFooterTDDefault nobr, .gridFooterTDDefault span{font-weight: bold;}
+
+/* gridView - groupbyZone */
+.w2grid_groupbyZone_list {width: auto !important; height: auto !important; max-width: 300px; max-height:300px; padding: 5px 0 !important; background: #fff; border:1px solid #dbdbdb; color:#333; overflow-y: auto;}
+.w2grid_groupbyZone_list_listRow {height: auto !important;padding: 7px 10px;  background:#fff; border:none;}
+.w2grid_groupbyZone_list_listColumn_checkbox {margin: 0 7px 0 0;}
+.w2list_listColumn_text {line-height: 15px; vertical-align: middle;}
+
+/* gridView - w2grid_sort */
+.w2grid_head_sort_td{background-position: center center;}
+.w2grid_head_sort_table_main tbody tr:hover  {background: transparent !important; }
+/*정렬 이미지 안보여서 수정함 2022 12 06*/
+/*.w2grid_head_sort_asc {background-image: url(/pgj/cm/images/contents/ico_sort_asc.png);}*/
+/*.w2grid_head_sort_desc {background-image: url(/pgj/cm/images/contents/ico_sort_desc.png);}*/
+/* .w2grid_head_sort_none_btn {background:none;} */
+.w2grid_head_sort_asc {background-image: url(/pgj/cm/images/contents/btn_file_up.png);}
+.w2grid_head_sort_desc {background-image: url(/pgj/cm/images/contents/btn_file_down.png);}
+.w2grid_head_sort_none_btn {background:none;}
+.w2grid_head_sort_none {background:none;}
+.w2grid_head_sort_asc_btn,.w2grid_head_sort_desc_btn {border: none !important;}
+.w2grid_head_sort_asc_btn {background-image: url(/pgj/cm/images/contents/ico_sort_asc.gif);}
+.w2grid_head_sort_desc_btn {background-image: url(/pgj/cm/images/contents/ico_sort_desc.gif);}
+.w2grid_head_sort_div_main_btn {top: 6px; right:0; border: none !important;}
+
+/* gridView - filter */
+.w2grid th.gridHeaderTDDefault.ast{color:#3eaae8;background-image:url(/pgj/cm/images/contents/bg_point_ico.png);background-position:0 0;background-repeat:no-repeat}
+.w2grid_customFilter .w2grid_customFilter_radio {margin:5px 0;}
+.w2grid_customFilter .w2grid_customFilter_list {height: auto !important;}
+.w2grid_customFilter .w2grid_customFilter_list_listRow {height: 30px !important; padding: 5px 2px; box-sizing: border-box;}
+.w2grid_customFilter .w2grid_customFilter_title,.w2grid_customFilter .w2grid_customFilter_text {font-size: 14px; color: #333;}
+.w2grid_customFilter .w2grid_customFilter_autocomplete, .w2grid_customFilter_selectbox {height: 30px; margin:0; box-sizing: border-box;}
+.w2grid_customFilter .w2grid_customFilter_button {background: #fff; border-radius:3px; font-size: 13px;}
+
+/* gridView - input 캘린더  */
+.w2grid .w2inputCalendar_div {width:100% !important; height:30px !important; margin-left:10px;}
+.w2grid .w2inputCalendar_div .w2inputCalendar_divInput{height:100% !important;}
+.w2grid .w2inputCalendar_div .w2inputCalendar_div_img{right:30px;}
+.w2grid .w2inputCalendar_div .w2inputCalendar_button{top:5px !important; border:none;}
+
+/* gridView - gridViewItemTable_main */
+.w2gridViewItemTable_main{background-color:transparent}
+.w2gridViewItemTable_main div{z-index:999 !important}
+.w2gridViewItemTable_main th{background:#edeef3 !important;border:1px solid #e3e3e3 !important}
+.w2gridViewItemTable_main .gridHeaderTableDefault .gridBodyDefault.focusedTr{border:1px solid #dbadbb !important;background:#fff6fb !important;color:#b61c21;font-weight:bold}
+.w2gridViewItemTable_main .gridHeaderTableDefault{border-top:3px solid #757984}
+
+/*  gridView - 툴팁 */
+.w2grid_tooltip {padding:8px 14px!important;background:#fff!important;color:#767676!important;border:1px solid #cdcdcd!important;border-radius:5px;box-shadow:0 1px 5px rgba(0, 0, 0, 0.2);}
+.fc__tooltip.fusioncharts-div {padding:8px 14px!important;background:#fff!important;color:#767676!important;border:1px solid #cdcdcd!important;border-radius:5px!important;box-shadow:0 1px 5px rgba(0, 0, 0, 0.2)!important;}
+
+/* focus */
+.w2input.w2input_focus,.w2inputCalendar_div .w2inputCalendar_focus{border:1px solid #333;}
+.w2grid .w2grid_embedded_input.w2input_focus{background: #fff;border:1px solid #333;}
+
+/* 그리드 상태 표시 아이콘 */
+.w2grid_rowStatus_C {background: url(/pgj/cm/images/contents/icon_C.png) no-repeat center center}
+.w2grid_rowStatus_U {background: url(/pgj/cm/images/contents/icon_U.png) no-repeat center center}
+.w2grid_rowStatus_D {background: url(/pgj/cm/images/contents/icon_D.png) no-repeat center center}
+.w2grid_rowStatus_V {background: url(/pgj/cm/images/contents/icon_V.png) no-repeat center center}
+
+/* 그리드 그룹바이 행배경색  추후 디자인 확인 후 칼라 변경 */
+.w2grid_groupby_depth_0 {background-color: #dfe9f8}
+.w2grid_groupby_depth_1 {background-color: #fff9e4}
+.w2grid_groupby_depth_2 {background-color: #fff}
+
+/* groupbyZone input Button Style */
+.w2grid_groupbyZone .w2grid_groupbyZone_search .w2grid_groupbyZone_searchinput{margin: 0 5px 0 0;}
+.w2grid_groupbyZone_searchbtn{position: absolute; right: 10px; width: 56px; height: 30px;border-radius: 3px;background: #1e2a4c url(/pgj/cm/images/contents/btn_refortsearch_on.png) no-repeat center center;}
+
+/*------------------------------------------------------------------
+[8. Tab ]
+-----------------------------------------------------------------*/
+
+/* tab */
+.w2tabcontrol_contents{-webkit-overflow-scrolling: touch}/* 모바일 tabControl scrolling */
+.w2table_tabControl{left:auto !important;right:0;margin-top:0;}
+
+
+/*------------------------------------------------------------------
+[9. Tool Tip  ]
+-----------------------------------------------------------------*/
+
+/*  툴팁  */
+.w2balloonTip {position : absolute;width : auto;display : none; _z-index : 5200;z-index:9999;}
+.w2balloonTip_col_topright {width: 1px;height: 0;background:transparent;}
+.w2balloonTip_col_centerleft {  width:1px;  background:#fff;}
+.w2balloonTip_col_centercenter {padding:8px 14px;background:#fff;color:#767676; text-align:left;border:1px solid #cdcdcd;_border-radius:5px;box-shadow:0 1px 5px rgba(0, 0, 0, 0.2);}
+.w2balloonTip_col_centerright { width:1px;  background:#fff;}
+.w2balloonTip_col_bottomleft {width:1px;height:5px; background:transparent; }
+.w2balloonTip_col_bottomcenter {background:transparent; }
+.w2balloonTip_col_bottomright { width:1px;  height:5px; background:transparent; }
+
+
+/*------------------------------------------------------------------
+[10. Etc(기타)  ]
+-----------------------------------------------------------------*/
+
+/* 일정관리 달력   */
+.fc-basic-view .fc-body .fc-row{height:100px!important;}
+.fc-day-header.fc-widget-header{text-align:left!important;padding:10px 17px!important;}
+.fc-ltr .fc-basic-view .fc-day-top .fc-day-number{float: left!important;}
+.fc-basic-view .fc-week-number, .fc-basic-view .fc-day-number { padding: 10px 10px 3px 7px!important;}
+
+/* 위젯*/
+.w2widget_btnFix {width: 17px; height: 17px;background: url(/pgj/cm/images/plugin/btn_pin_off.png)}
+.w2widget_fixed .w2widget_btnFix {background: url(/pgj/cm/images/plugin/btn_pin_on.png)}
+.w2widget_btnMinimize {width: 17px;height: 17x;background: url(/pgj/cm/images/plugin/btn_minimize.png)}
+.w2widget_btnMaximize {width: 17px;height: 17x;background: url(/pgj/cm/images/plugin/btn_maximize.png)}
+.w2widget_btnClose {width: 17px;height: 17x;background: url(/pgj/cm/images/plugin/btn_close.png)}
+
+/* FoatingLayer Popup*/
+.w2floatingLayer_table{border:1px solid #dbdbdb;}
+.w2floatingLayer_topleft {width:26px;}
+.w2floatingLayer_topcenter{height: 50px;}
+.w2floatingLayer_topleft, .w2floatingLayer_topcenter, .w2floatingLayer_topright{border-bottom:1px solid #959595;}
+.w2floatingLayer_close_button {width:14px;height:18px;background:url(/pgj/cm/images/contents/btn_fpop_close.png) no-repeat center center;}
+.w2floatingLayer_close_button_over {width:14px;height:18px;background:url(/pgj/cm/images/contents/btn_fpop_close.png) no-repeat center center;}
+.w2floatingLayer_topleft, .w2floatingLayer_topcenter, .w2floatingLayer_topright, .w2floatingLayer_centerleft, .w2floatingLayer_centerright,
+.w2floatingLayer_bottomleft, .w2floatingLayer_bottomcenter, .w2floatingLayer_bottomright{background:#fff none;}
+.w2floatingLayer_title{color: #111;font-size: 16px;}
+.w2floatingLayer_topright{width:26px;height:14px;}
+.w2floatingLayer_centercenter .w2floatingLayer_contents{height:auto!important;min-height: 120px;}
+
+.pop_layer .w2floatingLayer_table .w2floatingLayer_centercenter .w2floatingLayer_contents .w2textbox {padding:8px 0;color: #767676;font-size: 14px;line-height: 22px;}
+.pop_layer .w2floatingLayer_table .btn_group{padding: 15px 0;}
+
+
+/* upload */
+/* .w2upload {width: 250px;height: 30px;}
+.w2multiupload_uploader {position: absolute; height: 30px; top: 0; left: 0; width: 73px; opacity: 0.01; }
+input[type="file"]{cursor:pointer;}
+.w2upload .w2upload_input { width: 100% !important; height: 26px;color: #888; border-radius: 3px; }
+.w2upload .w2upload_image {top: 3px;right: 0;width: 26px;height: 26px;margin-left: 0;margin-right: 0!important;background-image: url(/pgj/cm/images/contents/img_flie_upload.png);}
+
+ */
+
+/* 팝업 */
+.w2window_header{height:50px;background:#66758c}
+.w2window_header .w2window_header_icon{display:none}
+.w2window_header .w2window_header_title{left:0;padding:12px 0 0 20px;font-size:16px;color:#fff}
+.w2window_header .w2window_header_control .w2window_close{top:16px;left: 26px;width:12px;height:12px;background-image:url(/pgj/cm/images/contents/btn_popclose.png)}
+.w2window_body{top:50px;padding:0;background-color:transparent;border:1px solid #dbdbdb;border-top:none}
+.w2window_body .w2window_content{top:20px;right:20px;bottom:20px;left:20px;border:none}
+.w2window_body .btn_group{padding: 0;}
+
+.popup_wrap{margin-bottom: 6px;min-height:100px;}
+.popup_wrap .txt01{font-size:14px;color:#767676}
+.popup_wrap .txt_wrap{margin:20px;font-size:14px;}
+.popup_wrap .txt_wrap .tit{color:#333;text-align:left;font-weight:600;margin:0 0 10px 0}
+.popup_wrap .txt_wrap .cont{text-align:left;}
+
+/* 시스템메시지 팝업 */
+.ly_popup{position:absolute;left:50%;top:50%;margin:-250px 0 0 -140px;width:500px;height:280px;background:#575f74;z-index:201;}
+.ly_popup .ly_head{position:relative;height:30px;padding:15px;}
+.ly_popup .ly_head .tit{line-height:33px;font-size:24px;color:#fff;}
+.ly_popup .ly_head .btn_pop_close{position:absolute;top:15px;right:15px;width:30px;height:30px;background:url(/images/contents/btn_popclose.png) no-repeat center center;text-indent:-9999px;}
+.ly_popup .ly_cont{padding:30px 15px 0;text-align:center;}
+.ly_popup .ly_cont .txt1{line-height:32px;font-size:20px;color:#fff;}
+.ly_popup .ly_cont .txt2{line-height:23px;font-size:14px;color:#fff;}
+.ly_popup .ly_cont .btn_pop{display:inline-block;padding:0 15px;height:36px;margin-top:30px;line-height:32px;color:#fff;font-size:16px;border:1px solid #fff;background:#626a7e;border-radius:2px;box-sizing:border-box;}
+.ly_popup .ly_cont .btn_pop:hover{background:#575f74;}
+.dimd{position:absolute;top:0;left:0;right:0;bottom:0;background:#ccc;opacity:0.3;filter:alpha(opacity="30");z-index:200;}
+
+/* Window 팝업 */
+.w2popup_window .w2window_body .w2window_content{top: 0;right: 0;bottom: 0;left: 0;border: none;}
+.w2popup_window .w2window_body .w2window_content .sub_contents{height: calc(100% - 40px);padding: 20px;}
+.w2popup_window .w2window_body .w2window_content .sub_contents .inner_wrap{min-height: calc(100% - 100px);padding: 20px;}
+.w2popup_window .w2window_body .w2window_content .sub_contents .inner_wrap .btn_group {padding: 10px 0 0 0;}
+
+/* selectbox 다단 */
+.w2table_sb {background-color: transparent}
+.w2table_sb ul{background-color: #fff;}
+.w2table_sb > ul{margin-top:0;}
+.w2selectbox_over.w2selectbox_ul_table_main{background-color: transparent}
+.w2selectbox_over .w2selectbox_ul_col_arrow,
+.w2selectbox_ul_col_arrow  {background: transparent url(/pgj/cm/images/contents/btn_dropdown.png) 50% 50% no-repeat;}
+.w2table_depth{border: 1px solid #cdcdcd;}
+.w2selectbox .w2selectbox_ul_label,
+.w2table_depth>li>a{color: #5a5a5a;font-size: 13px;}
+.w2table_subdepth_show>.w2table_depth{margin-top: 0;}
+
+/* w2window_header */
+.w2window_header .w2window_header_control .w2window_close.w2window_close_disabled{ background-image: none;cursor: none;}
+
+/* config 코드의 selectedCellColor value="#dfecf1" 적용이 안됨 강제 important 지정 */
+.w2grid .focusedTd{background-color: #dfecf1!important}
+
+/* w2spinner */
+.w2spinner.w2_horizon.type1 {margin: 4px 0;width: 126px!important;height: 30px!important;margin: 0 0 8px 0;}
+.w2spinner.w2_horizon.type1 .w2input{height: 30px!important;width:100px!important;}
+.w2spinner.w2_horizon.type1 .w2spinner_up{margin-top: 4px;}
+.w2spinner.w2_horizon.type1 .w2spinner_down{margin-top: 4px;}
+

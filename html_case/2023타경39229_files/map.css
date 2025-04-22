@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+#mf_map {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: calc(100% - 45px);
+    border: none;
+    border-width: 0;
+    margin-top: 45px;
+}
+
+.marker {
+    font-family: "Dotum", "Arial";
+    line-height: 15px;
+}
+
+#mf_mapControll{
+    width: calc(100% - 454px);
+    height: 42px;
+    position: absolute;
+    border-bottom: 1px solid #ddd;
+}
+            
+            
+.btn-level{
+	width: 14px !important;
+    height: 12px;
+    margin-top: 2px;
+    float: left;
+    cursor: pointer;
+    margin-right: 1px;
+}
+
+.map_level{
+    padding: 3px 0 5px 7px;
+    float: right;
+    background: url(/pgj/cm/images/map/bg_map_level.gif) no-repeat;
+    width: 300px;
+    text-align: center;
+    margin: 10px 10px 0 0;
+}
+
+#mf_zoomLevel{
+    width: 50px;
+    height: 22px;
+    position: absolute;
+    top: 9px;
+    right: 25px;
+}
+
+.mapSel{
+    height: 30px !important;
+    font-size: 13px;
+}
+
+.map_btn_group{
+	position: relative;
+    text-align: right;
+}
+
+.important{
+	color: /* #f5981e */ #996a2d;
+}
+
+.markerIndex{
+    padding: 1px 7px;
+    background-color: #0c36ba;
+    margin-right: 6px;
+    border-radius: 8px;
+    display: inline-block;
+    color: #fff;
+}
+
+.marker.markerIndex.selected{
+    background-color: #ed0c0c;
+}
+
+.marker.selected{
+    color: #fff600;
+}
+
+.control_01{
+    background-image: url(/pgj/cm/images/map/control_01.gif);
+}
+
+.control_01:hover{
+    background-image: url(/pgj/cm/images/map/control_01_on.gif);
+}
+
+.control_02{
+    background-image: url(/pgj/cm/images/map/control_02.gif);
+}
+
+.control_02:hover{
+    background-image: url(/pgj/cm/images/map/control_02_on.gif);
+}
+
+.control_03{
+    background-image: url(/pgj/cm/images/map/control_03.gif);
+}
+
+.control_03:hover{
+    background-image: url(/pgj/cm/images/map/control_03_on.gif);
+}
+
+.control_04{
+    background-image: url(/pgj/cm/images/map/control_04.gif);
+}
+
+.control_04:hover{
+    background-image: url(/pgj/cm/images/map/control_04_on.gif);
+}
+
+.control_05{
+    background-image: url(/pgj/cm/images/map/control_05.gif);
+}
+
+.control_05:hover{
+    background-image: url(/pgj/cm/images/map/control_05_on.gif);
+}
+
+.control_06{
+    background-image: url(/pgj/cm/images/map/control_06.gif);
+}
+
+.control_06:hover{
+    background-image: url(/pgj/cm/images/map/control_06_on.gif);
+}
+
+.control_07{
+    background-image: url(/pgj/cm/images/map/control_07.gif);
+}
+
+.control_07:hover{
+    background-image: url(/pgj/cm/images/map/control_07_on.gif);
+}
+
+.mapBtn{
+	width: 25px;
+    height: 24px;
+    border: 0px;
+    margin: 0 2.5px;
+    background-position:0 0;background-repeat:no-repeat;
+}
