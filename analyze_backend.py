@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from bs4 import BeautifulSoup
 import openai
 
@@ -98,7 +98,7 @@ def analyze():
 
 @app.route("/")
 def index():
-    return "<h1>챗사무장 서버 정상 작동 중!</h1>"
+    return render_template("index.html")
 
 if __name__ == "__main__":
     import os
